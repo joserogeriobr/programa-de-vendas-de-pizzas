@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="José Rogério Fernandes Mirandola">
+    <meta name="keywords" content="HTML5, PIZZAS"> 
+    <meta name="description" content="Cálculo de vendas de pizzas">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header>
+        <ul>
+            <li><h1>PIZZA DO DIVINO</h1></li>
+            <li><H2>CATEDRAL DO DIVINO ESPÍRITO SANTO</H2></li>
+        </ul>
+    </header>
+
+    <section>    
+        <form>
+            <H3>Escolha a pizza que foi vendida</H3>
+            <ul>
+                <li>
+                  <input name="pizzas" type="radio" id="mussarela">
+                  <label for="mussarela">Mussarela</label>
+                </li>
+              
+                <li>
+                  <input name="pizzas" type="radio" id="mista">
+                  <label for="mista">Mista</label>
+                </li>
+              
+                <li>
+                  <input name="pizzas" type="radio" id="calabresa">
+                  <label for="calabresa">Calabresa</label>
+                </li>
+              </ul>
+        </form>
+    </section>
+    <section>
+        <button id="vendas">Vendas</button>  <button id="estorno">Estorno</button><br><br>
+    </section>
+       
+    <section id="table">
+        <table>
+            <tr>
+                <th>Sabores</th><th>Quantidades</th><th>Valores</th>
+            </tr>
+            <tr>
+                <td>Mussarela</td><td><div id="resultadoMussarela"></div></td><td><div id="vendaMussarela"></div></td>
+            </tr>
+            <tr>
+                <td>Mista</td><td><div id="resultadoMista"></div></td><td><div id="vendaMista"></div></td>
+            </tr>
+            <tr>
+                <td>Calabresa</td><td><div id="resultadoCalabresa"></div></td><td><div id="vendaCalabresa"></div></td>
+            </tr>
+
+        </table>
+    </section>
+    <section>
+        <button id="btnExport" onclick="exportReportToExcel(this)">Tabela</button>
+    </section>
+    <script src="https://cdn.jsdelivr.net/gh/linways/table-to-excel@v1.0.4/dist/tableToExcel.js"></script>
+
+    <script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>
